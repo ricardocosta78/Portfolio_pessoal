@@ -12,7 +12,22 @@ html {
   font-size: 10px;
   font-family: 'Roboto', sans-serif;
   color: #eee;
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
 }
+html::-webkit-scrollbar {
+  width: 30px;
+}
+html::-webkit-scrollbar-track {
+  border-radius: 0;
+  box-shadow: 5px 5px 10px rgb(27, 27, 32) inset, -5px -5px 10px #fff inset;
+}
+html::-webkit-scrollbar-thumb {
+  border-radius: 30px 0px 30px 0px;
+  box-shadow: -5px -5px 5px rgb(27, 27, 32) inset, 5px 5px 5px #fff inset;
+  background-color: #100e69;
+}
+
 body {
   width: 100%;
   height: 100%;
@@ -22,6 +37,7 @@ body {
 }
 section {
   padding: 6rem 0;
+  scroll-snap-align: center;
 }
 
 a {
@@ -98,6 +114,13 @@ header {
   width: 100%;
   height: 100vh;
   position: relative;
+  scroll-snap-align: center;
+}
+.logo img {
+  position: absolute;
+  top: 5%;
+  left: 7%;
+  width: 120px;
 }
 .top-nav {
   width: 100%;
@@ -358,7 +381,7 @@ li {
 .landing-text h6 {
   position: absolute;
   top: 43%;
-  left: 20%;
+  left: 17%;
   font-size: 4rem;
   font-weight: 300;
   font-family: 'Big Shoulders Stencil Display', cursive;
@@ -366,6 +389,8 @@ li {
   padding: 0 2rem;
   font-weight: 700;
   letter-spacing: 2px;
+  text-align: center;
+  box-shadow: -5px -5px 5px rgb(27, 27, 32) inset, 5px 5px 5px #fff inset;
 }
 
 .landing-text a {
@@ -391,6 +416,7 @@ li {
 .landing-text a:hover {
   background-color: white;
   color: #100e69;
+  box-shadow: -5px -5px 5px rgb(27, 27, 32) inset, 5px 5px 5px #fff inset;
 }
 
 .landing-text a i {
@@ -813,6 +839,7 @@ footer .assinatura .imagem {
     position: relative;
     top: 0;
     left: 10%;
+    width: 70%;
   }
   .landing-text p {
     position: relative;
@@ -836,7 +863,11 @@ footer .assinatura .imagem {
     color: #100e69;
   }
 }
-
+@media screen and (max-width: 1075px) {
+  .landing-text h6 {
+    font-size: 3.2rem;
+  }
+}
 @media screen and (max-width: 768px) {
   body {
     background: url('images/sitebg2.jpg') no-repeat center fixed;
@@ -853,6 +884,7 @@ footer .assinatura .imagem {
     top: 25%;
     right: 50%;
     transform: translate(20%, -50%);
+    width: 100%;
   }
   .landing-text a {
     position: absolute;
@@ -917,11 +949,12 @@ footer .assinatura .imagem {
   .landing-text h1 {
     font-size: 8rem;
     top: 50%;
-    left:50%;
-    transform: translate(-50%,-50%);
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
   .landing-text h6 {
     font-size: 3.5rem;
+    width: 100%;
   }
   .landing-text a {
     position: absolute;
@@ -965,6 +998,13 @@ footer .assinatura .imagem {
     font-size: 1.4rem;
   }
   form {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 592px) {
+  .landing-text h6 {
+    font-size: 2.5rem;
     width: 100%;
   }
 }
