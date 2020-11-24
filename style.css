@@ -35,7 +35,8 @@ body {
   background-size: cover;
   z-index: -1;
 }
-section {
+section,
+footer {
   padding: 6rem 0;
   scroll-snap-align: center;
 }
@@ -84,19 +85,24 @@ img {
   transform: translateX(-50%);
   background-color: rgba(255, 255, 255, 0.75);
   width: 16rem;
-  height: 3px;
+  height: 10px;
   border-radius: 0.8rem;
+  box-shadow: inset -10px -10px 15px rgba(255, 255, 255, 0.25),
+    inset -2px -2px 5px rgba(255, 255, 255, 0.5),
+    inset -6px -6px 2px rgba(255, 255, 255, 0.5),
+    inset 10px 10px 15px rgba(0, 0, 0, 0.5),
+    inset 2px 2px 5px rgba(0, 0, 0, 0.5), inset 8px 8px 15px rgba(0, 0, 0, 0.5);
 }
 .section-heading h1::after {
   content: '';
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  background-color: rgba(40, 218, 233, 1);
+  background-color: #100e69;
   width: 1.5rem;
   height: 1.5rem;
   border-radius: 100%;
-  bottom: -2rem;
+  bottom: -1.7rem;
 }
 .section-heading {
   font-size: 1.6rem;
@@ -116,6 +122,7 @@ header {
   position: relative;
   scroll-snap-align: center;
 }
+
 .logo img {
   position: absolute;
   top: 5%;
@@ -352,11 +359,11 @@ li {
 }
 .landing-text h1 {
   font-size: 14rem;
-  font-family: 'Teko', sans-serif;
+  font-family: 'Big Shoulders Stencil Display', cursive;
   background: linear-gradient(to top, #0a1d8c, #28dae9);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  padding: 1rem 2rem;
+  padding: 0.5rem 2rem;
   user-select: none;
 }
 
@@ -460,11 +467,11 @@ li {
 }
 @keyframes animate {
   0% {
-    color: #333;
+    color: rgb(236, 229, 229);
     text-shadow: none;
   }
   100% {
-    color: rgba(21, 163, 230, 0.5);
+    color: rgba(rgba(15, 14, 105, 0.7));
     text-shadow: 0 0 10px #fff, 0 0 20px rgb(134, 253, 243),
       0 0 30px rgb(17, 167, 226), 0 0 40px rgb(82, 118, 238),
       0 0 60px rgb(53, 73, 252), 0 0 80px rgb(4, 7, 196);
@@ -705,7 +712,7 @@ li {
   width: 90%;
   background: #f8ebff;
   border-radius: 50px;
-  margin: 20px auto;
+  margin: 10px auto 0 auto;
   box-shadow: inset -10px -10px 15px rgba(0, 0, 0, 0.25),
     inset -2px -2px 5px rgba(0, 0, 0, 0.5),
     inset -6px -6px 2px rgba(0, 0, 0, 0.5),
@@ -788,6 +795,33 @@ input[type='submit']:hover {
   color: #001247;
   background-color: #f8ebff;
 }
+.social-media-nav .social-list-contact {
+  width: 50%;
+  margin: 20px auto 10px auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  list-style: none;
+}
+.social-media-nav .social-list-contact i {
+  color: #001247;
+  margin-top: 10px;
+  font-size: 3rem;
+  padding: 2rem;
+  border-radius: 50%;
+  border: none;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5), 8px 8px 2px rgba(0, 0, 0, 0.25),
+    -5px -5px 10px rgba(248, 235, 255, 0.5),
+    -8px -8px 10px rgba(255, 255, 255, 0.25);
+  transition: all 0.5s ease-in-out;
+}
+.social-media-nav .social-list-contact i:hover {
+  background-color: #001247;
+  color: rgb(248, 235, 255);
+  box-shadow: -2px -2px 2px rgba(0, 0, 0, 0.25),
+    -2px -2px 2px rgba(0, 0, 0, 0.25), 0px 2px 10px rgba(248, 235, 255, 0.5),
+    2px 2px 10px rgba(255, 255, 255, 0.25);
+}
 /*End contact*/
 
 /*Start footer*/
@@ -797,21 +831,24 @@ input[type='submit']:hover {
   justify-content: center;
   align-items: center;
   text-align: center;
-  background-color: #001247;
-  padding: 2rem 0;
+  background-color: transparent;
+  padding: 1rem 0;
   position: relative;
 }
 .up {
   position: absolute;
   width: 5rem;
   height: 5rem;
-  background-color: #28dae9;
+  background-color: #f8ebff;
   right: 5rem;
-  top: -2.5rem;
+  bottom: 10;
   border-radius: 100%;
   display: flex;
   animation: pulse 2s infinite;
   cursor: pointer;
+}
+.up a {
+  margin: auto;
 }
 .up i {
   color: #16162d;
@@ -823,10 +860,9 @@ input[type='submit']:hover {
   margin: 0 auto;
 }
 footer .assinatura .imagem {
-  width: 140px;
-  filter: invert(1);
-  margin-top: 10px;
-  margin-right: 10px;
+  width: 500px;
+
+  margin: 0 auto;
 }
 /*End footer*/
 
@@ -834,13 +870,13 @@ footer .assinatura .imagem {
 
 @keyframes pulse {
   0% {
-    box-shadow: 0 0 0 0 rgba(253, 87, 191, 0.99);
+    box-shadow: 0 0 0 0 rgba(35, 42, 138, 0.99);
   }
   70% {
-    box-shadow: 0 0 0 2rem rgba(253, 87, 191, 0);
+    box-shadow: 0 0 0 1rem rgba(255, 255, 255, 0.2);
   }
   100% {
-    box-shadow: 0 0 0 0 rgba(253, 87, 191, 0);
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4);
   }
 }
 
@@ -931,9 +967,12 @@ footer .assinatura .imagem {
     background: url('images/sitebg2.jpg') no-repeat center fixed;
     background-size: cover;
   }
+  html::-webkit-scrollbar-thumb {
+    background-color: #221e3f;
+  }
   .landing-text h1 {
     font-size: 9rem;
-    top: 40%;
+    top: 30%;
     right: 20%;
     transform: translate(20%, -50%);
   }
@@ -948,7 +987,7 @@ footer .assinatura .imagem {
     position: absolute;
     display: flex;
     transform: rotate(360deg);
-    top: 50%;
+    top: 40%;
     left: 50%;
     padding: 0.5rem;
     width: 50%;
@@ -998,6 +1037,19 @@ footer .assinatura .imagem {
   .timeline .date:after {
     left: -5.9rem;
   }
+  .social-media-nav .social-list-contact i {
+    margin: 0 1rem;
+  }
+  footer .assinatura .imagem {
+    width: 400px;
+  }
+  .up {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+  .up i {
+    font-size: 1.5rem;
+  }
 }
 @media screen and (max-width: 650px) {
   .menu-toggler {
@@ -1006,7 +1058,7 @@ footer .assinatura .imagem {
   }
   .landing-text h1 {
     font-size: 8rem;
-    top: 50%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
   }
@@ -1018,7 +1070,7 @@ footer .assinatura .imagem {
     position: absolute;
     display: flex;
     transform: rotate(-360deg);
-    top: 70%;
+    top: 65%;
     left: 10%;
     padding: 0.5rem;
     width: 37%;
@@ -1058,11 +1110,41 @@ footer .assinatura .imagem {
   form {
     width: 100%;
   }
+  footer .assinatura .imagem {
+    width: 350px;
+  }
 }
 
 @media screen and (max-width: 592px) {
+  .landing-text h1 {
+    font-size: 7rem;
+    top: 30%;
+    width: 100%;
+  }
   .landing-text h6 {
     font-size: 2.5rem;
     width: 100%;
+    top: 45%;
+    left: 5%;
+  }
+  .landing-text a {
+    font-size: 2.5rem;
+    width: 100%;
+    top: 50%;
+    left: 0%;
+  }
+  .social-media-nav .social-list-contact i {
+    font-size: 1.5rem;
+    margin: 0 1rem;
+  }
+  footer .assinatura .imagem {
+    width: 250px;
+  }
+  .up {
+    width: 3rem;
+    height: 3rem;
+  }
+  .up i {
+    font-size: 1.2rem;
   }
 }
