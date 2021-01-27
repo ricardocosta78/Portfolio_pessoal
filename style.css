@@ -804,14 +804,19 @@ input[type='submit']:hover {
   list-style: none;
 }
 .social-media-nav .social-list-contact i {
+  width:60px;
+  height:60px;
+  margin-top:10px;
   color: #001247;
-  margin-top: 10px;
+  display: flex;
+  align-items:center;
+  justify-content:center;
   font-size: 3rem;
   padding: 2rem;
   border-radius: 50%;
   border: none;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5), 8px 8px 2px rgba(0, 0, 0, 0.25),
-    -5px -5px 10px rgba(248, 235, 255, 0.5),
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5), 4px 4px 2px rgba(0, 0, 0, 0.25),
+    -3px -3px 8px rgba(248, 235, 255, 0.5),
     -8px -8px 10px rgba(255, 255, 255, 0.25);
   transition: all 0.5s ease-in-out;
 }
